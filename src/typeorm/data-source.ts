@@ -1,12 +1,12 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
 
 export const dataSourceOptions: DataSourceOptions = {
-  host: 'localhost',
+  host: process.env.DATABASE_HOST,
   type: 'mysql',
-  port: Number(3306),
-  username: 'root',
-  password: 'p4ssw0rd',
-  database: 'factu_fazil_dashboard_test',
+  port: Number(process.env.DATABASE_PORT),
+  username: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE_DB,
   logging: true,
   entities: ['dist/**/*.model{ .ts,.js}'],
   migrations: ['dist/database/migrations/*{.ts,.js}'],
