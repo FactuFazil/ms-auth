@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "engines": {
-    "node": ">=16 < 18"
+    "node": "18.10.0"
   },
   "scripts": {
     "build": "nest build yarn run typeorm -- migration:run",
